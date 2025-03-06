@@ -19,11 +19,20 @@ jobs:
         run: |
           git config --global user.name "Snakebit33"
           git config --global user.email "23218415+Snakebit33@users.noreply.github.com"
-
-      - name: Add Upstream and Sync
+          
+      - name: Add Upstream Remote
         run: |
           git remote add upstream https://github.com/Snakebit33/faf-pioneer.git
           git fetch upstream
+
+      - name: Sync main Branch
+        run: |
           git checkout main
-          git merge upstream/main --allow-unrelated-histories
+          git merge --no-edit upstream/main
           git push origin main
+
+      - name: Sync developer Branch
+        run: |
+          git checkout developer
+          git merge --no-edit upstream/developer
+          git push origin developer
