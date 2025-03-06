@@ -22,7 +22,7 @@ jobs:
 
       - name: Add Upstream and Sync
         run: |
-          git remote add upstream https://github.com/ORIGINAL-OWNER/ORIGINAL-REPO.git
+          git remote add upstream https://github.com/Snakebit33/faf-pioneer.git
           git fetch upstream
           git checkout main
           git merge upstream/main --allow-unrelated-histories
