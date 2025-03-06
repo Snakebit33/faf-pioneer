@@ -31,8 +31,8 @@ jobs:
           git merge --no-edit upstream/main
           git push origin main
 
-      - name: Sync developer Branch
+      - name: Sync develop Branch
         run: |
-          git checkout developer
-          git merge --no-edit upstream/developer
-          git push origin developer
+          git checkout develop
+          git merge --no-edit upstream/develop
+          git push origin develop
