@@ -33,6 +33,6 @@ jobs:
 
       - name: Sync develop Branch
         run: |
-          git checkout develop
+          git checkout --track origin/develop || git checkout -b develop upstream/develop
           git merge --no-edit upstream/develop
           git push origin develop
